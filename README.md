@@ -1,7 +1,7 @@
 # ListViewBinder
 
 [![CI Status](https://img.shields.io/travis/jacknathan/ListViewBinder.svg?style=flat)](https://travis-ci.org/jacknathan/ListViewBinder)
-[![Version](https://img.shields.io/cocoapods/v/ListViewBinder.svg?style=flat)](https://cocoapods.org/pods/ListViewBinder)
+[![1.0.1](https://img.shields.io/cocoapods/v/ListViewBinder.svg?style=flat)](https://cocoapods.org/pods/ListViewBinder)
 [![License](https://img.shields.io/cocoapods/l/ListViewBinder.svg?style=flat)](https://cocoapods.org/pods/ListViewBinder)
 [![Platform](https://img.shields.io/cocoapods/p/ListViewBinder.svg?style=flat)](https://cocoapods.org/pods/ListViewBinder)
 
