@@ -22,7 +22,7 @@ extension TableViewDataSourceBinder  {
     public typealias DataSource = RxTableViewSectionedReloadDataSource<SectionModel>
     
     /// 将UITableView与RxDataSource的数据源绑定, 该方法必须前置调用
-    public func binder(with view: UITableView) {
+    public func startBinder(with view: UITableView) {
         dataArray = BehaviorRelay(value: [])
         dataArray
             .asObservable()

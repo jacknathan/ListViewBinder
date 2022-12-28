@@ -1,7 +1,7 @@
 PODS:
   - Differentiator (5.0.0)
   - EmptyDataSet-Swift (5.0.0)
-  - ListViewBinder (0.1.0):
+  - ListViewBinder (1.0.0):
     - Differentiator
     - EmptyDataSet-Swift (~> 5.0)
     - RxDataSources (~> 5.0)
@@ -37,12 +37,12 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
   EmptyDataSet-Swift: eb382c0c87a2d9c678077385a595cec52da38171
-  ListViewBinder: f4b44f6dd0fe6430b34995475510141b3ab0e3a9
+  ListViewBinder: 65878638cd4abf0dbf23ffaf2fea8248f1f8832a
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
 
-PODFILE CHECKSUM: 1589b6ad194111ad323bab0ab382848e342ccc92
+PODFILE CHECKSUM: 9dc3a016593f816cf8bf4e563166facf393b1083
 
 COCOAPODS: 1.11.3

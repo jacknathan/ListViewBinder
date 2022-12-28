@@ -1,13 +1,8 @@
 use_frameworks!
 
-platform :ios, '10.0'
+platform :ios, '11.0'
 
 target 'ListViewBinder_Example' do
   pod 'ListViewBinder', :path => '../'
-  
-  target 'ListViewBinder_Tests' do
-    inherit! :search_paths
 
-    
-  end
 end

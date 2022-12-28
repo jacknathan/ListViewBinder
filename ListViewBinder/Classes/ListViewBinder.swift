@@ -18,7 +18,7 @@ public protocol ListViewBinder: AnyObject {
     //  dataSource数据源
     var dataArray : BehaviorRelay<[SectionModel]> {get set}
     //  业务层（网络请求）返回的单页数据
-    var pageData: AnyObserver<PageData<SectionModel>> { get }
+    var pageData: AnyObserver<PageItem<SectionModel>> { get }
     // disposeBag
     var disposeBag : DisposeBag { get }
 }
@@ -37,8 +37,8 @@ extension ListViewBinder {
         }
     }
     /// 订阅网络请求返回的单页数据，处理后更新dataArray
-    public var pageData: AnyObserver<PageData<SectionModel>> {
-        return AnyObserver<PageData> { [unowned self] (event) in
+    public var pageData: AnyObserver<PageItem<SectionModel>> {
+        return AnyObserver<PageItem> { [unowned self] (event) in
             switch event {
             case .next(let pageItem):
                 switch pageItem {
@@ -57,7 +57,7 @@ extension ListViewBinder {
         }
     }
     
-    func accept(pageData: PageData<SectionModel>) {
+    func accept(pageData: PageItem<SectionModel>) {
         _ = Observable
              .just(pageData)
              .bind(to: self.pageData)

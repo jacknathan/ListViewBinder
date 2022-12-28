@@ -72,7 +72,7 @@ public struct CollectionVSectionData: CollectionSection {
     }
 }
 // 业务层（网络请求）返回的单页数据，分单section和多section的情况
-public enum PageData<S: ListSection>{
+public enum PageItem<S: ListSection>{
     // 只有一个section的情况
     case singleSection(page: Int, rows: [RowData])
     // 多个section的情况

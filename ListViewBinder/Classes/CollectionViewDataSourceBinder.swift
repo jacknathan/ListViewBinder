@@ -27,7 +27,7 @@ extension CollectionViewDataSourceBinder {
     public typealias CanMoveItemAtIndexPath = CollectionViewSectionedDataSource<SectionModel>.CanMoveItemAtIndexPath
     
     /// 将UICollectionView与RxDataSource的数据源绑定, 该方法必须前置调用
-    public func binder(with view: UICollectionView) {
+    public func startBinder(with view: UICollectionView) {
         dataArray = BehaviorRelay(value: [])
         dataArray.asObservable()
             .bind(to: view.rx.items(dataSource: dataSource))
