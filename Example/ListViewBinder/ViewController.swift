@@ -27,9 +27,9 @@ class ViewController: UIViewController, TableViewDataSourceBinder {
         startBinder(with: tableView)
         
         // model可以自定义类型
-        let row1 = RowData(identity: MyCell.description(), model: "name1")
-        let row2 = RowData(identity: MyCell.description(), model: "name2")
-        let row3 = RowData(identity: MyCell.description(), model: "name3")
+        let row1 = RowData(identity: MyCell.description(), model: "model1")
+        let row2 = RowData(identity: MyCell.description(), model: "model2")
+        let row3 = RowData(identity: MyCell.description(), model: "model3")
 //        let section = TableVSectionData.init(items: [row1, row2, row3])
 //        let section2 = TableVSectionData.init(items: [row1, row2, row3])
         // 单组的写法

@@ -1,13 +1,22 @@
 # ListViewBinder
-
-[![CI Status](https://img.shields.io/travis/jacknathan/ListViewBinder.svg?style=flat)](https://travis-ci.org/jacknathan/ListViewBinder)
-[![Version](https://img.shields.io/cocoapods/v/ListViewBinder.svg?style=flat)](https://cocoapods.org/pods/ListViewBinder)
-[![License](https://img.shields.io/cocoapods/l/ListViewBinder.svg?style=flat)](https://cocoapods.org/pods/ListViewBinder)
-[![Platform](https://img.shields.io/cocoapods/p/ListViewBinder.svg?style=flat)](https://cocoapods.org/pods/ListViewBinder)
+对RxDataSource的封装，简化使用
 
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+	startBinder(with: tableView) 绑定UITableView或者UICollectionView数据源
+
+	let row1 = RowData(identity: MyCell.description(), model: "model1")
+	let row2 = RowData(identity: MyCell.description(), model: "model2")
+	let row3 = RowData(identity: MyCell.description(), model: "model3")
+	let page = PageItem<SectionModel>.singleSection(page: 0, rows: [row1, row2, row3])
+
+	Observable
+            .just(page)
+            .bind(to: pageData)
+            .disposed(by: disposeBag)
+    省去实现UITableView DataSource的delegate
+    详见工程中的example
+
 
 ## Requirements
 

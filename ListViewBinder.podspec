@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
     对RxDataSource的使用封装
                        DESC
 
-  s.homepage         = 'https://github.com/jacknathan/ListViewBinder'
+  s.homepage         = 'https://github.com/jacknathan'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'jacknathan' => 'a63561158@163.com' }
