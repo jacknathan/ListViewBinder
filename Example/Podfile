@@ -4,7 +4,7 @@ platform :ios, '10.0'
 
 target 'ListViewBinder_Example' do
   pod 'ListViewBinder', :path => '../'
-
+  
   target 'ListViewBinder_Tests' do
     inherit! :search_paths
 

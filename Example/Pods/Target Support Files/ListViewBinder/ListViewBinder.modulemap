@@ -1,0 +1,6 @@
+framework module ListViewBinder {
+  umbrella header "ListViewBinder-umbrella.h"
+
+  export *
+  module * { export * }
+}

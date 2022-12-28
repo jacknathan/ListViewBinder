@@ -41,11 +41,11 @@
 		607FACE51AFB9204008FA782 /* ListViewBinder_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ListViewBinder_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		826FE0D71DA3498F7C57838E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		826FE0D71DA3498F7C57838E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		A64CBCE04118BE40DA4F8A1B /* Pods-ListViewBinder_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListViewBinder_Tests.debug.xcconfig"; path = "Target Support Files/Pods-ListViewBinder_Tests/Pods-ListViewBinder_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		AE51EFA695DC8A91F8855339 /* ListViewBinder.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = ListViewBinder.podspec; path = ../ListViewBinder.podspec; sourceTree = "<group>"; };
+		AE51EFA695DC8A91F8855339 /* ListViewBinder.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ListViewBinder.podspec; path = ../ListViewBinder.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AEE60EBC8065A30FC645A075 /* Pods_ListViewBinder_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ListViewBinder_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B94320A0DB94355F1B26477A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		B94320A0DB94355F1B26477A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		BC36419159D6FBA2D406EA79 /* Pods-ListViewBinder_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListViewBinder_Example.debug.xcconfig"; path = "Target Support Files/Pods-ListViewBinder_Example/Pods-ListViewBinder_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,7 +156,6 @@
 				A64CBCE04118BE40DA4F8A1B /* Pods-ListViewBinder_Tests.debug.xcconfig */,
 				17988601D7115AB6A643EC0F /* Pods-ListViewBinder_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -313,11 +313,23 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ListViewBinder_Example/Pods-ListViewBinder_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/EmptyDataSet-Swift/EmptyDataSet_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/ListViewBinder/ListViewBinder.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EmptyDataSet_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ListViewBinder.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
