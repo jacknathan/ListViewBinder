@@ -34,11 +34,11 @@ public struct EmptyViewConfig {
 }
 
 /// 占位图协议
-public protocol EmptyHolder: ListViewBinder, EmptyDataSetSource, EmptyDataSetDelegate {
+public protocol EmptyHolder: EmptyDataSetSource, EmptyDataSetDelegate {
     var state: EmptyViewConfig {get set}
 }
 
-extension EmptyHolder {
+extension EmptyHolder where Self: ListViewBinder {
     public var state: EmptyViewConfig {
         get {
             return objc_getAssociatedObject(self, &AssociateKey.state) as? EmptyViewConfig ?? EmptyViewConfig.shared
@@ -80,7 +80,7 @@ extension EmptyHolder {
     }
 }
 
-extension EmptyHolder {
+extension EmptyHolder where Self: ListViewBinder {
     public func emptyDataSetShouldDisplay(_ scrollView: UIScrollView) -> Bool {
         return shouldDisplayEmpty
     }

@@ -10,7 +10,7 @@ import UIKit
 import ListViewBinder
 import RxSwift
 
-class ViewController: UIViewController, TableViewDataSourceBinder {
+class ViewController: UIViewController, TableViewDataSourceBinder, EmptyHolder {
     typealias SectionModel = TableVSectionData
     var disposeBag = DisposeBag()
 
@@ -24,7 +24,10 @@ class ViewController: UIViewController, TableViewDataSourceBinder {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(tableView)
+        // 绑定数据源
         startBinder(with: tableView)
+        // 开启列表无数据时的展位图
+        enableEmptyView(scrollView: tableView)
         
         // model可以自定义类型
         let row1 = RowData(identity: MyCell.description(), model: "model1")
