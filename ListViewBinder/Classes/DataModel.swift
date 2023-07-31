@@ -53,8 +53,8 @@ public struct TableVSectionData: ListSection {
 public struct SupplementaryInfo {
     var reuseIdStr: String
     var model: Any?
-    init(reuseIdStr: String,
-         model: Any?) {
+    public init(reuseIdStr: String,
+                model: Any?) {
         self.reuseIdStr = reuseIdStr
         self.model = model
     }
