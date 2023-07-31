@@ -47,13 +47,16 @@ extension CollectionViewDataSourceBinder {
     public var configureSuppleView : ConfigureSuppleView {
         return { (dataSource, list, kind, indexPath) in
             var supplementaryView: UICollectionReusableView?
-            if kind == UICollectionView.elementKindSectionHeader, let headerId = dataSource[indexPath.section].header  {
-                supplementaryView = list.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath)
-            } else if let footId = dataSource[indexPath.section].footer {
-                supplementaryView = list.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: footId, for: indexPath)
-            }
-            if let view = supplementaryView as? SupplementaryViewConfig {
-                view.config(model: dataSource[indexPath.section], kind: kind, indexPath: indexPath)
+            if kind == UICollectionView.elementKindSectionHeader, let headerInfo = dataSource[indexPath.section].header  {
+                supplementaryView = list.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerInfo.reuseIdStr, for: indexPath)
+                if let view = supplementaryView as? CellConfigData, let info = dataSource[indexPath.section].header {
+                    view.config(model: info, indexPath: indexPath)
+                }
+            } else if let footerInfo = dataSource[indexPath.section].footer {
+                supplementaryView = list.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: footerInfo.reuseIdStr, for: indexPath)
+                if let view = supplementaryView as? CellConfigData, let info = dataSource[indexPath.section].footer {
+                    view.config(model: info, indexPath: indexPath)
+                }
             }
             return supplementaryView ?? UICollectionReusableView()
         }

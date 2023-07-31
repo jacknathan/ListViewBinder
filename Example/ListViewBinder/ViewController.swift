@@ -33,11 +33,12 @@ class ViewController: UIViewController, TableViewDataSourceBinder, EmptyHolder {
         let row1 = RowData(identity: MyCell.description(), model: "model1")
         let row2 = RowData(identity: MyCell.description(), model: "model2")
         let row3 = RowData(identity: MyCell.description(), model: "model3")
-//        let section = TableVSectionData.init(items: [row1, row2, row3])
-//        let section2 = TableVSectionData.init(items: [row1, row2, row3])
+
         // 单组的写法
         let page = PageItem<SectionModel>.singleSection(page: 0, rows: [row1, row2, row3])
         // 多组的写法
+//        let section = TableVSectionData.init(items: [row1, row2, row3])
+//        let section2 = TableVSectionData.init(items: [row1, row2, row3])
 //        let page = PageItem.multiSection(page: 0, sections: [section, section2])
         
         // 网络请求返回的结果绑定到PageData处理

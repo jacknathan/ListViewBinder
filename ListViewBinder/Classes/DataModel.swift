@@ -15,13 +15,14 @@ public protocol ListSection: SectionModelType where Item == RowData {
     init(items: [RowData])
 }
 
+
 // 配置UICollectionView的组数据
 public protocol CollectionSection: ListSection {
-    var header: String? {get set}
-    var footer: String? {get set}
+    var header: SupplementaryInfo? {get set} // header resuseIdentify
+    var footer: SupplementaryInfo? {get set} // footer resuseIdentify
     init(items: [RowData],
-         header: String?,
-         footer: String?)
+         header: SupplementaryInfo?,
+         footer: SupplementaryInfo?)
 }
 
 // 数据model配置 UITableViewCell/UICollectionViewCell
@@ -48,15 +49,26 @@ public struct TableVSectionData: ListSection {
     }
 }
 
+// 配置SupplementaryView数据
+public struct SupplementaryInfo {
+    var reuseIdStr: String
+    var model: Any?
+    init(reuseIdStr: String,
+         model: Any?) {
+        self.reuseIdStr = reuseIdStr
+        self.model = model
+    }
+}
+
 // collectionView的section model （业务层可自己定义）
 public struct CollectionVSectionData: CollectionSection {
     public var items: [RowData]
-    public var header: String?
-    public var footer: String?
+    public var header: SupplementaryInfo? // header resuseIdentify
+    public var footer: SupplementaryInfo? // footer resuseIdentify
     
     public init(items: [RowData],
-                header: String? = nil,
-                footer: String? = nil) {
+                header: SupplementaryInfo? = nil,
+                footer: SupplementaryInfo? = nil) {
         self.header = header
         self.items = items
         self.footer = footer
