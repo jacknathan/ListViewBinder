@@ -49,12 +49,12 @@ extension CollectionViewDataSourceBinder {
             var supplementaryView: UICollectionReusableView?
             if kind == UICollectionView.elementKindSectionHeader, let headerInfo = dataSource[indexPath.section].header  {
                 supplementaryView = list.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerInfo.reuseIdStr, for: indexPath)
-                if let view = supplementaryView as? CellConfigData, let info = dataSource[indexPath.section].header {
+                if let view = supplementaryView as? CellConfigData, let info = dataSource[indexPath.section].header?.model {
                     view.config(model: info, indexPath: indexPath)
                 }
             } else if let footerInfo = dataSource[indexPath.section].footer {
                 supplementaryView = list.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: footerInfo.reuseIdStr, for: indexPath)
-                if let view = supplementaryView as? CellConfigData, let info = dataSource[indexPath.section].footer {
+                if let view = supplementaryView as? CellConfigData, let info = dataSource[indexPath.section].footer?.model {
                     view.config(model: info, indexPath: indexPath)
                 }
             }
